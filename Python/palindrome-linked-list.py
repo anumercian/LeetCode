@@ -36,3 +36,13 @@ class Solution:
             tail = tail.next
 
         return is_palindrome
+
+    def isPalindrome2(self, head):
+	#O(n) solution
+	
+	temp = []
+	while head != None:
+	    temp.append(head.data)
+	    head = head.next
+	return temp == temp[::-1]
+
